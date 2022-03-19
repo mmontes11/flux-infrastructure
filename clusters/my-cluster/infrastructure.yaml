@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: infrastructure
+  name: kyverno
   namespace: flux-system
 spec:
   interval: 5m
@@ -17,7 +17,7 @@ spec:
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: infrastructure
+  name: kyverno-policies
   namespace: flux-system
 spec:
   dependsOn:
@@ -29,5 +29,3 @@ spec:
   serviceAccountName: kustomize-controller
   path: ./infrastructure/kyverno-policies
   prune: true
-  wait: true
-  timeout: 5m
