@@ -7,4 +7,3 @@ flux bootstrap github \
   --path=./clusters/my-cluster \
   --personal \
   --private \
-  --network-policy 
