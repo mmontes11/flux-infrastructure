@@ -13,7 +13,8 @@ spec:
         name: flux-system
   interval: 5m
   values:
-    url: ssh://git@github.com/mmontes11/flux-tenant-podinfo
-    branch: master
-    path: ./clusters/my-cluster
-    secretName: flux-system
+    repo:
+      url: ssh://git@github.com/mmontes11/flux-tenant-podinfo
+      branch: master
+      path: ./clusters/my-cluster
+      secretName: flux-system
