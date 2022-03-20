@@ -19,3 +19,4 @@ spec:
       url: ssh://git@github.com/mmontes11/flux-tenant-podinfo
       branch: master
       path: ./clusters/my-cluster
+      secretName: "flux-system"
