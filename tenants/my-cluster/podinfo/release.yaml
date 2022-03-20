@@ -2,7 +2,7 @@ apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
   name: podinfo
-  namespace: flux-system
+  namespace: podinfo
 spec:
   releaseName: podinfo
   chart:
@@ -11,10 +11,10 @@ spec:
       sourceRef:
         kind: GitRepository
         name: flux-system
+        namespace: flux-system
   interval: 5m
   values:
     repo:
       url: ssh://git@github.com/mmontes11/flux-tenant-podinfo
       branch: master
       path: ./clusters/my-cluster
-      secretName: flux-system

@@ -4,4 +4,3 @@ repo:
   url: ""
   branch: ""
   path: ""
-  secretName: "flux-system"
