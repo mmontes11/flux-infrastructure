@@ -1,21 +1,6 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: sources
-  namespace: flux-system
-spec:
-  interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/sources
-  prune: true
-  wait: true
-  timeout: 5m
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
   name: nginx
   namespace: flux-system
 spec:
@@ -26,23 +11,6 @@ spec:
     kind: GitRepository
     name: flux-system
   path: ./infrastructure/nginx
-  prune: true
-  wait: true
-  timeout: 5m
----
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
-kind: Kustomization
-metadata:
-  name: redis
-  namespace: flux-system
-spec:
-  dependsOn:
-    - name: sources
-  interval: 5m
-  sourceRef:
-    kind: GitRepository
-    name: flux-system
-  path: ./infrastructure/redis
   prune: true
   wait: true
   timeout: 5m
