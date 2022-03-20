@@ -22,4 +22,4 @@ roleRef:
 subjects:
 - kind: ServiceAccount
   name: {{ include "tenant.name" . }}
-  namespace: {{ .Release.Namespace }}
+  namespace: flux-system
