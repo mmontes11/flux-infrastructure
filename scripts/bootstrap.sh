@@ -6,4 +6,4 @@ flux bootstrap github \
   --branch=main \
   --path=./clusters/my-cluster \
   --personal \
-  --private \
+  --private=false
