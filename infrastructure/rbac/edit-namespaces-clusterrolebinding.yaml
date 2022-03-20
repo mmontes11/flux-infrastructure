@@ -3,7 +3,7 @@ kind: ClusterRole
 metadata:
   name: edit-namespaces
   labels:
-    rbac.example.com/aggregate-to-edit: "true"
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
 rules:
   - apiGroups:
       - ""
