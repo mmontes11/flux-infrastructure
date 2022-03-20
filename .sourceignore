@@ -5,6 +5,7 @@
 /*
 
 # Include manifest directories
+!/charts/
 !/clusters/
 !/infrastructure/
 !/tenants/
