@@ -12,5 +12,5 @@ spec:
         kind: HelmRepository
         name: bitnami-labs
         namespace: flux-system
-      version: "0.17.3"
+      version: "2.1.4"
   interval: 1h0m0s
