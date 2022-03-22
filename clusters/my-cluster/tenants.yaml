@@ -5,9 +5,9 @@ metadata:
   namespace: flux-system
 spec:
   dependsOn:
-    - name: nginx
-    - name: rbac
     - name: sources
+    - name: rbac
+    - name: nginx
   interval: 5m
   sourceRef:
     kind: GitRepository
