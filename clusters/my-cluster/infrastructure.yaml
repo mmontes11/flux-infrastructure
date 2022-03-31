@@ -10,7 +10,6 @@ spec:
     name: flux-system
   path: ./infrastructure/rbac
   prune: true
-  wait: true
   timeout: 5m
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -25,7 +24,6 @@ spec:
     name: flux-system
   path: ./infrastructure/sources
   prune: true
-  wait: true
   timeout: 5m
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
@@ -59,5 +57,4 @@ spec:
     name: flux-system
   path: ./infrastructure/nginx
   prune: true
-  wait: true
   timeout: 5m

@@ -4,12 +4,14 @@
 
 ### Getting started
 
-Create a new cluster with [KIND](https://kind.sigs.k8s.io/):
+1. Create a new cluster with [KIND](https://kind.sigs.k8s.io/):
 ```bash
 ./scripts/kind.sh
 ``` 
 
-Fork this repository and then execute this commands to install Flux and bootstrap the cluster:
+2. Place your TLS certificate and private key at in the `certs/` directory.
+
+3. Fork this repository and then execute this commands to install Flux and bootstrap the cluster:
 ```bash
 export GITHUB_USER=<user>
 export GITHUB_TOKEN=<personal-access-token>
